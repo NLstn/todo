@@ -11,6 +11,9 @@ on:
 jobs:
   java-check:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./backend
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -24,6 +27,7 @@ jobs:
 
       - name: Compile code
         run: mvn clean compile
+
 
       - name: Run tests
         run: mvn test
