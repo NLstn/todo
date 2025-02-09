@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+    color: black;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+#todo-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    background-color: #f9f9f9;
+    color: black;
+}
+
+#todo-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#todo-input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    color: black;
+}
+
+#add-todo-button {
+    padding: 10px 20px; /* Adjust padding to make the button size fit the text */
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px; /* Add some space between the input and button */
+    background-color: white;
+    color: black;
+}
+
+#add-todo-button:hover {
+    background-color: #218838;
+}
+
+#todo-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    color: black;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+#todo-list li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#todo-list li button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#todo-list li button:hover {
+    background-color: #c82333;
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: #e0e0e0;
+    }
+
+    h1 {
+        color: #e0e0e0;
+    }
+
+    #todo-container {
+        background-color: #1e1e1e;
+        color: #e0e0e0;
+    }
+
+    #todo-input, #add-todo-button {
+        background-color: #333;
+        color: #e0e0e0;
+    }
+
+    #todo-list {
+        background-color: #1e1e1e;
+        color: #e0e0e0;
+    }
+
+    /* Override the todo list item styles for dark mode */
+    #todo-list li {
+        background-color: #2c2c2c;
+        border: 1px solid #444;
+    }
+
+    #todo-list li button {
+        background-color: #dc3545;
+        color: #fff;
+    }
+
+    #todo-list li button:hover {
+        background-color: #c82333;
+    }
+}
